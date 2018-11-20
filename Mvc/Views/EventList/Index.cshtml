@@ -1,0 +1,32 @@
+﻿@model List<SitefinityWebApp.Mvc.Models.EventList>
+ @foreach (var item in Model)
+ {
+    <table border="1">
+        <tr>
+            <th>Title</th>
+            <th>description</th>
+            <th>EventStart</th>
+            <th>EventEnd</th>
+            <th>Street</th>
+            <th>City</th>
+            <th>Country</th>
+            <th>State</th>
+            <th>Image</th>
+            <th>Organiser</th>
+        </tr>
+        <tr>
+            <td>@item.Title</td>
+            <td>@Html.Raw(item.description)</td>
+            <td>@item.EventStart</td>
+            <td>@item.EventEnd</td>
+            <td>@item.Street</td>
+            <td>@item.City</td>
+            <td>@item.Country</td>
+            <td>@item.State</td>
+            <td><img src="@item.Image" width="50" height="50"/></td>
+            <td>@item.Organiser</td>
+
+
+        </tr>
+    </table>
+ }

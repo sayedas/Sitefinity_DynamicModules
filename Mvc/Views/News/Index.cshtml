@@ -1,0 +1,8 @@
+﻿@model List<SitefinityWebApp.Mvc.Models.News>
+    @foreach (var item in Model)
+    {
+        <h3>Title:</h3> @item.Title
+        <h3> Description: </h3> @Html.Raw(item.Description)
+        <h3> Image: </h3> <img src="@item.Image" />
+
+    }
